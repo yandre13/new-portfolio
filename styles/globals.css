@@ -1,16 +1,65 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	background: #000;
+}
+:root {
+	--second__color: #09f;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer utilities {
+	.text-main {
+		color: #9a9da8;
+	}
+	.bg-main {
+		background: var(--second__color);
+	}
+	.text-sec {
+		/* color: #f9004d; */
+		color: var(--second__color);
+	}
 
-* {
-  box-sizing: border-box;
+	button:focus {
+		outline: 0 !important;
+	}
+
+	.line_active::after {
+		content: '';
+		display: block;
+		background: var(--second__color);
+		height: 2px;
+		border-radius: 4px;
+		width: 69%;
+	}
+
+	@responsive {
+		.leading-1-1 {
+			line-height: 1.1;
+		}
+		.rm-br br {
+			display: none;
+		}
+		.add-br br {
+			display: block;
+		}
+		.bg-blur {
+			background: #000;
+		}
+		@supports (backdrop-filter: saturate(180%) blur(25px)) {
+			.bg-blur {
+				background: transparent;
+				backdrop-filter: saturate(180%) blur(16px);
+				border: 0;
+			}
+		}
+	}
 }
