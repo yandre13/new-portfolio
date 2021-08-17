@@ -31,11 +31,12 @@ export default function CardProject({image, link, title, color}) {
 			>
 				<motion.div
 					animate={{y: isHover ? -60 : 74}}
+					transition={{duration: 0.2}}
 					className="absolute bottom-6 h-full w-full flex flex-col justify-end items-start text-main px-6"
 				>
 					<motion.span
 						animate={{color: isHover ? '#111' : '#999'}}
-						transition={{duration: 0.4}}
+						transition={{duration: 0.2}}
 						className="w-full text-base font-semibold"
 					>
 						{title[0]}
@@ -46,8 +47,8 @@ export default function CardProject({image, link, title, color}) {
 						rel="noreferrer noopener"
 						target="_blank"
 						className={cn(
-							'block text-sm font-semibold text-[#111] uppercase tracking-wider px-5 py-2 border-2 rounded-md mt-6 z-40',
-							color && `border-${color}`,
+							'block text-sm font-semibold text-white uppercase tracking-wider px-5 py-2 rounded-md mt-6 z-40',
+							color && `bg-${color}`,
 						)}
 					>
 						See demo

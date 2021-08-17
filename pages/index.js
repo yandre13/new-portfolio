@@ -99,9 +99,9 @@ export default function Home() {
 							<p className="text-base lg:text-xl text-center mt-4 mb-4 md:mb-8">
 								These are my latest projects I haven been working on.
 							</p>
-							<div className="hidden from-blue-400 border-blue-400"></div>
-							<div className="hidden from-pink-500 border-pink-500"></div>
-							<div className="hidden from-green-300 border-green-300"></div>
+							<div className="hidden from-blue-400 bg-blue-400"></div>
+							<div className="hidden from-pink-500 bg-pink-500"></div>
+							<div className="hidden from-green-300 bg-green-300"></div>
 							<article className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 								<CardProject
 									image={project1}
